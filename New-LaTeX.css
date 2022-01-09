@@ -1,51 +1,21 @@
 @charset "UTF-8";
-/* ============================================
- * ============ TYPORA lATEX THEME ============
- * ============================================
- * This project is based on the work of yfzhao20 and du33169,
-   whose repositories are addressed on
-   <https://github.com/yfzhao20/Typora-markdown> and
-   <https://github.com/du33169/typora-theme-essay_cn>,
-   many thanks to them.
- * Typora LaTeX Theme (Markdown LaTeX Theme)
-   is a CSS theme mainly used as a component of Typora,
-   which is designed for Chinese university students
-   used in LaTeX-styled essays and reports.
- * Copyright (C) 2021 Keldos;
- * Repository Address: <https://github.com/Keldos-Li/typora-latex-theme>;
- * Licensed Under GPL v3.0, SEE <https://github.com/Keldos-Li/typora-latex-theme/blob/main/LICENSE>
- */
-/* As a special exception, you may create a larger work
-   that contains part or all of the Typora LaTeX Theme
-   and distribute that work under terms of your choice,
-   so long as that work isn't itself a CSS theme
-   or can be processed into CSS theme by using some
-   CSS pre-processors like SASS. Alternatively, if you
-   modify or redistribute this CSS theme itself,
-   you may (at your option) remove this special exception,
-   which will cause the CSS theme and the resulting output files
-   to be licensed under the GNU General Public License
-   without this special exception.
- */
 :root {
   /* == 字体设置 == */
-  /* 基准字体 */
-  /* 备选：Times, "Times New Roman" */
-  --base-Latin-font: "Latin Modern Roman", "Latin Modern Roman 10";
-  --base-Chinese-font: "宋体-简", "华文宋体", "Noto Serif CJK SC";
-  --base-font-size: 9.5pt;
+	/* 基准字体 */
+	--base-Latin-font: "Latin Modern Roman";
+	--base-Chinese-font: "宋体-简";
+	--base-font-size: 1em;
   /* 引言字体 */
-  --quote-font: "Latin Modern Roman", "Latin Modern Roman 10", Times,
-    "Times New Roman", "华文仿宋";
+  --quote-font: "Latin Modern Roman", "华文仿宋";
   /* 这里字体用了10pt,比正文字体稍大 */
-  --quote-font-size: 10pt;
+  --quote-font-size: var(--base-font-size);
   /* 代码字体（代码中的中文会调用 ui-font） */
-  --code-font: "Latin Modern Mono", "Latin Modern Mono 10", "Courier New";
+  --code-font: "Latin Modern Mono";
   /* 侧边栏字体 */
   --ui-font: "苹方-简";
   /* source mode 字体 */
   /* 默认调用 code-font 和 ui-font */
-  --sourceMode-font: "SF Mono", "苹方-简";
+  --sourceMode-font: "Latin Modern Mono", "苹方-简";
   /* 目录字体 */
   /* 默认调用 base-font */
   --toc-font: "";
@@ -58,31 +28,31 @@
   --table-font: "";
   /* 标题字体（总设置） */
   --heading-Latin-font: var(--base-Latin-font);
-  --heading-Chinese-font: "华文黑体Bold";
+  --heading-Chinese-font: var(--base-Chinese-font);
   /* 标题字体分别设置 */
   /* 大标题（h1）字体 */
-  --title-Chinese-font: "华文黑体Bold";
-  --title-font-size: 18pt;
+  --title-Chinese-font: var(--base-Chinese-font);
+  --title-font-size: 2em;
   /* h2字体 */
-  --h2-Chinese-font: "方正公文黑体";
-  --h2-font-size: 14pt;
+  --h2-Chinese-font: var(--base-Chinese-font);
+  --h2-font-size: 1.6em;
   /* h3字体 */
-  --h3-Chinese-font: "方正公文黑体";
-  --h3-font-size: 12pt;
+  --h3-Chinese-font: var(--base-Chinese-font);
+  --h3-font-size: 1.4em;
   /* h4字体 */
-  --h4-Chinese-font: "方正公文楷体";
-  --h4-font-size: 10pt;
+  --h4-Chinese-font: var(--base-Chinese-font);
+  --h4-font-size: 1.2em;
   /* h5字体 */
-  --h5-Chinese-font: "方正公文仿宋";
-  --h5-font-size: 10pt;
+  --h5-Chinese-font: var(--base-Chinese-font);
+  --h5-font-size: 1em;
   /* h6字体 */
-  --h6-Chinese-font: "方正公文仿宋";
-  --h6-font-size: 9.5pt;
+  --h6-Chinese-font: var(--base-Chinese-font);
+  --h6-font-size: 0.9em;
   /* 粗体样式设置 */
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
   --strong-weight: 900;
   /* 基础行距 */
-  --base-line-height: 16pt;
+  --base-line-height: 1.8em;
   /* == 页面设置 == */
   /* 打印页边距 */
   --set-margin: 1.8cm 2cm 1.2cm 2cm !important;
@@ -108,7 +78,7 @@ strong {
     /* 添加一个淡蓝色的边框 */
     /*border: 0.8px solid #AAC ; */
     /* 页边阴影 */
-    box-shadow: 0 0 24px 12px #cccccc;
+    /*box-shadow: 0 0 24px 12px #cccccc;*/
   }
 }
 @media print {
@@ -141,7 +111,14 @@ strong {
   counter-reset: h2 0 h3 0 h4 0 h5 0 h6 0;
 }
 #write p {
-  text-align: left;
+	/* text-indent: 2em; */
+	margin-top: 0.8em;
+	margin-bottom: 0em;
+	text-align: justify;
+	white-space: pre-line;
+}
+#write span{
+	text-align: justify;
 }
 #write h1,
 #write h2,
@@ -149,42 +126,58 @@ strong {
 #write h4,
 #write h5,
 #write h6 {
-  font-weight: normal;
+  font-weight: 900;
+  line-height: 1.5em;
   /* 标题字体 */
   font-family: var(--heading-Latin-font), var(--heading-Chinese-font), sans-serif;
   page-break-after: avoid !important;
 }
 #write h1 {
   font-family: var(--heading-Latin-font), var(--title-Chinese-font), sans-serif;
-  font-weight: normal;
+	margin-top: 1em;
+	margin-bottom: 2em;
   text-align: center;
   column-span: all;
   font-size: var(--title-font-size);
 }
 #write h2 {
   font-family: var(--heading-Latin-font), var(--h2-Chinese-font), sans-serif;
+  margin-top: 1.5em;
+	margin-bottom: 0.6em;
   font-size: var(--h2-font-size);
 }
 #write h3 {
   font-family: var(--heading-Latin-font), var(--h3-Chinese-font), sans-serif;
+  margin-top: 1.5em;
+	margin-bottom: 0.6em;
   font-size: var(--h3-font-size);
   line-height: var(--h3-font-size);
 }
 #write h4 {
   font-family: var(--heading-Latin-font), var(--h4-Chinese-font), sans-serif;
+  margin-top: 1.75em;
+	margin-bottom: 0.7em;
   font-size: var(--h4-font-size);
   line-height: var(--h4-font-size);
 }
 #write h5 {
   font-family: var(--heading-Latin-font), var(--h5-Chinese-font), sans-serif;
+  margin-top: 1.75em;
+	margin-bottom: 0.7em;
   font-size: var(--h5-font-size);
   line-height: var(--h5-font-size);
 }
 #write h6 {
   font-family: var(--heading-Latin-font), var(--h6-Chinese-font), sans-serif;
+  margin-top: 2em;
+	margin-bottom: 0.8em;
   font-size: var(--h6-font-size);
   /* 没有写错，为了避免行距太小才这么写 */
   line-height: var(--h5-font-size);
+}
+#write a {
+	color: #ff5060;
+	text-decoration: none;
 }
 #write table {
   /* 三线表第一条线宽度 */
@@ -266,7 +259,7 @@ blockquote {
   border-left: 3px solid grey;
   /* 文字离左边框的距离 */
   padding-left: 16px;
-  padding-right: 20pt;
+  padding-right: 2em;
   /* 左边框离页面边的距离 */
   margin-left: 20px;
   color: grey;
