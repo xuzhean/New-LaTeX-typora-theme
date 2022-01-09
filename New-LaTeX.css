@@ -55,7 +55,7 @@
   --base-line-height: 1.8em;
   /* == 页面设置 == */
   /* 打印页边距 */
-  --set-margin: 1.8cm 1.65cm 1.2cm 1.65cm !important;
+  --set-margin: 1.8cm 1.6cm 1.2cm 1.6cm !important;
   /* == 控制设置 == */
   /* 目录中是否显示一级标题 */
   --toc-show-title: none;
@@ -92,7 +92,7 @@ strong {
   }
 
   @page {
-    margin: 1.65cm 1.5cm 1.2cm 1.65cm !important;
+    margin: 1.8cm 1.6cm 1.2cm 1.6cm !important;
     /* 页边距 */
   }
 }
