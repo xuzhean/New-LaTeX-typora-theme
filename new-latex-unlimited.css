@@ -52,7 +52,7 @@
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
   --strong-weight: 900;
   /* 基础行距 */
-  --base-line-height: 1.8em;
+  --base-line-height: 1.5em;
   /* == 页面设置 == */
   /* 打印页边距 */
   --set-margin: 1.8cm 0.5cm 1.2cm 0.5cm !important;
@@ -111,7 +111,7 @@ strong {
 }
 #write p {
 	/* text-indent: 2em; */
-	margin-top: 0.8em;
+	margin-top: 0.5em;
 	margin-bottom: 0em;
 	text-align: justify;
 	white-space: pre-line;

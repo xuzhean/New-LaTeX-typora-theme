@@ -6,16 +6,16 @@
 	--base-Chinese-font: "宋体-简";
 	--base-font-size: 1em;
   /* 引言字体 */
-  --quote-font: "Latin Modern Roman", "华文仿宋";
+  /* --quote-font: "NewComputerModern10"; */
   /* 这里字体用了10pt,比正文字体稍大 */
   --quote-font-size: var(--base-font-size);
   /* 代码字体（代码中的中文会调用 ui-font） */
-  --code-font: "Latin Modern Mono";
+  --code-font: "NewComputerModernMono10";
   /* 侧边栏字体 */
   --ui-font: "苹方-简";
   /* source mode 字体 */
   /* 默认调用 code-font 和 ui-font */
-  --sourceMode-font: "Latin Modern Mono", "苹方-简";
+  --sourceMode-font: "NewComputerModernMono10", "苹方-简";
   /* 目录字体 */
   /* 默认调用 base-font */
   --toc-font: "";
@@ -55,7 +55,7 @@
   --base-line-height: 1.5em;
   /* == 页面设置 == */
   /* 打印页边距 */
-  --set-margin: 1.8cm 1.6cm 1.2cm 1.6cm !important;
+  --set-margin: 0.9cm 0.8cm 0.6cm 0.8cm !important;
   /* == 控制设置 == */
   /* 目录中是否显示一级标题 */
   --toc-show-title: none;
@@ -92,7 +92,7 @@ strong {
   }
 
   @page {
-    margin: 1.8cm 1.6cm 1.2cm 1.6cm !important;
+    margin: 0.9cm 0.8cm 0.6cm 0.8cm !important;
     /* 页边距 */
   }
 }
@@ -101,7 +101,7 @@ strong {
   font-family: var(--base-Latin-font), var(--base-Chinese-font), serif;
   font-size: var(--base-font-size);
   /* A4标准宽度 */
-  max-width: 32cm;
+  max-width: 25cm;
   background-color: white;
   /* column-count: 2;
     column-gap: 25px;
@@ -114,11 +114,11 @@ strong {
 	/* text-indent: 2em; */
 	margin-top: 0.5em;
 	margin-bottom: 0em;
-	text-align: justify;
-	white-space: pre-line;
+	/* text-align: justify; */
+	/* white-space: pre-line; */
 }
 #write span{
-	text-align: justify;
+	/* text-align: justify; */
 }
 #write h1,
 #write h2,
@@ -280,15 +280,15 @@ ul {
   list-style: disc;
 }
 ul ul {
-  /*list-style: circle;*/
+  list-style: circle;
   /* 直接用空格代替一部分缩进的调整了我真懒 */
-  list-style: "–　 ";
+  /* list-style: "–　 "; */
   /*left: -0.8em;*/
 }
 ul ul ul {
   /* 无序列表第三极：小圈 */
-  list-style: "◦　  ";
-  left: 0.6em;
+  list-style: square;
+  /* left: 0.6em; */
 }
 
 ol {

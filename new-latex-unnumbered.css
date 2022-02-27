@@ -52,7 +52,7 @@
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
   --strong-weight: 900;
   /* 基础行距 */
-  --base-line-height: 1.8em;
+  --base-line-height: 1.5em;
   /* == 页面设置 == */
   /* 打印页边距 */
   --set-margin: 1.8cm 1.6cm 1.2cm 1.6cm !important;
@@ -112,7 +112,7 @@ strong {
 }
 #write p {
 	/* text-indent: 2em; */
-	margin-top: 0.8em;
+	margin-top: 0.5em;
 	margin-bottom: 0em;
 	text-align: justify;
 	white-space: pre-line;
@@ -362,32 +362,32 @@ li code {
 
 #write h2:before {
   counter-increment: h2;
-  content: counter(h2);
-  margin-right: 2rem;
+  content: "";
+  margin-right: 0rem;
 }
 
 #write h3:before, h3.md-focus.md-heading:before {
   counter-increment: h3;
-  content: counter(h2) "." counter(h3);
-  margin-right: 2rem;
+  content: "";
+  margin-right: 0rem;
 }
 
 #write h4:before, h4.md-focus.md-heading:before {
   counter-increment: h4;
-  content: counter(h2) "." counter(h3) "." counter(h4);
-  margin-right: 2rem;
+  content: "";
+  margin-right: 0rem;
 }
 
 #write h5:before, h5.md-focus.md-heading:before {
   counter-increment: h5;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
-  margin-right: 2rem;
+  content: "";
+  margin-right: 0rem;
 }
 
 #write h6:before, h6.md-focus.md-heading:before {
   counter-increment: h6;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6);
-  margin-right: 2rem;
+  content: "";
+  margin-right: 0rem;
 }
 
 /* 目录 */
